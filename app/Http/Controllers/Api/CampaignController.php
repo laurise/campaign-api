@@ -33,7 +33,7 @@ class CampaignController extends Controller
         return CampaignResource::collection($campaigns->paginate($perPage));
     }
 
-    public function store(Request $request)
+    public function create(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'author_id' => 'required|exists:mysql2.users,id',
@@ -71,7 +71,7 @@ class CampaignController extends Controller
         });
 
         return response()
-            ->json(['message' => 'Campaign successfully created']);
+            ->json(['created' => true], 201);
     }
 
     private function orderByInput(Builder $campaigns, string $inputType, string $sortDirection): Builder

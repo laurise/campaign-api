@@ -10,5 +10,7 @@ interface UserRepositoryInterface
 
     public function search(Request $request): array;
 
-    public function findById(int $id): ?object;
+    public function findById(int $id): array;
+
+    public function random(): array;
 }

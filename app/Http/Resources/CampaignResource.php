@@ -25,11 +25,11 @@ class CampaignResource extends JsonResource
             'updated_at' => $this->updated_at,
 
             'author' => [
-                'id' => $author->id,
-                'name' => $author->name,
-                'email' => $author->email,
-                'created_at' => $author->created_at,
-                'updated_at' => $author->updated_at,
+                'id' => $author['id'],
+                'name' => $author['name'],
+                'email' => $author['email'],
+                'created_at' => $author['created_at'],
+                'updated_at' => $author['updated_at'],
             ],
         ];
 

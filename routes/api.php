@@ -19,5 +19,5 @@ Route::get('/users', [UserController::class, 'index']);
 
 Route::prefix('/campaigns')->group(function () {
     Route::get('/', [CampaignController::class, 'index']);
-    Route::post('/create', [CampaignController::class, 'store']);
+    Route::post('/', [CampaignController::class, 'create']);
 });
